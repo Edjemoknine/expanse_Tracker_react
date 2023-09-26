@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
+.authentication {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 370px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: linear-gradient(to right, rgb(3, 33, 114), rgb(3, 3, 59));
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.tracker {
+  /* display: flex; */
+  overflow: hidden;
+  color: rgb(226, 223, 223);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.2)
+  );
+  margin: 10px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px 5px rgba(0, 0, 0, 0.3);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.list_tracker {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  list-style: none;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.1)
+  );
+  border-radius: 3px;
+  padding: 5px;
+  margin-bottom: 3px;
 }
-
-.App-link {
-  color: #61dafb;
+.dispaly {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.1)
+  );
+  border-radius: 10px;
+  padding: 20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.transaction_container {
+  max-height: 430px;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 5px;
   }
-  to {
-    transform: rotate(360deg);
+  &::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 10px;
   }
 }
